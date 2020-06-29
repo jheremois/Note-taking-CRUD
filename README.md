@@ -18,7 +18,7 @@ npm i mysql express express-session body-parser pug morgan
 npm i nodemon -D
 ```
 
-**Put your Mysql user and password at "src/database/conection.js"**
+**Put your Mysql user and password at "src/database/conection.js":**
 
 ```
 const mysql = require('mysql')

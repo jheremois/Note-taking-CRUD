@@ -1,7 +1,15 @@
+/*
+    Import the conection function:
+*/
 const bd = require('../database/conection')
 
 const conecion = bd()
 
+
+
+/*
+    Render main view:
+*/
 exports.home = (req, res)=>{
     conecion.query('SELECT * FROM nts',(err,resu)=>{
         res.render('home',{
@@ -11,6 +19,10 @@ exports.home = (req, res)=>{
 
 }
 
+
+/*
+    Add datas to the main view:
+*/
 exports.upload = (req, res)=>{
 
     const {title, content } = req.body
@@ -21,6 +33,10 @@ exports.upload = (req, res)=>{
 
 }
 
+
+/*
+    Delete datas from de table and from the main view:
+*/
 exports.delate = (req,res)=>{
     const {id} = req.params
     console.log(id)

@@ -8,7 +8,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Notes
     body
-        header
+        header#head
             h1 Notes
         section
             .notas    
@@ -23,6 +23,6 @@ html(lang="en")
                     .nota
                         a(href=`/delete/${note[i].id}`) x
                         .tit
-                            h3= note[i].title
+                            h2#titl= note[i].title
                         p.conten= note[i].content    
 script(src="inicio.js")
