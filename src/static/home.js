@@ -25,13 +25,13 @@ const color_change = (div) =>{
     
 }
 
-/*
-    run function:
-*/
+
+
 color_change('head')
 setInterval(() => {
     color_change('head')
 }, 13000);
+
 
 
 
@@ -43,10 +43,29 @@ const font_w = (font) =>{
     for (let i = 0; i < font.length; i++) {
      
         font[i].style.fontWeight = '100'
-
+        
     }
 }
 
 let h2s = document.querySelectorAll('#titl')
 
 font_w(h2s)
+
+/*
+    bouncing efect:
+*/
+const bouns = (note)=>{
+
+    const not = document.querySelectorAll(note)
+    const nt = document.querySelectorAll(note).length - 1
+
+    not[nt].style.transformOrigin = 'all'
+    not[nt].style.transitionDuration = '500ms'
+
+    setTimeout(() => {
+        for(i=0; i < nt + 1; i++){
+            not[i].style.transform =  'scale(1)'}    
+    }, 400);
+}
+
+bouns('#boun')

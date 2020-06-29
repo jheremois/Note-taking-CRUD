@@ -10,10 +10,10 @@ const app = express()
 
 // Set the view engine (pug) and the laction of the vews files
 app.set('view engine','pug')
-app.set('views', path.join(__dirname,'./vistas'))
+app.set('views', path.join(__dirname,'./views'))
 
 // Set statics files
-app.use(express.static(path.join(__dirname,'./estaticos')))
+app.use(express.static(path.join(__dirname,'./static')))
 
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(session({
@@ -27,7 +27,7 @@ app.use(morgan('dev'))
 // Server configuration
 app.set('port', process.env.PORT || 3000 )
 const server = http.createServer(app)
-const rutas = require('./rutas/ruth')
-app.use('/', rutas())
+const routes = require('./routes/route')
+app.use('/', routes())
 server.listen(app.get('port'))
 console.log(`Port: ${app.get('port')}`)

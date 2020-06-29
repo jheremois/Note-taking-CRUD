@@ -13,7 +13,6 @@ header{
     border-bottom: solid 1px #f4ffe4;
     box-shadow: -1px -5px 32px 0px rgba(0, 0, 0, 0.527);
 }
-
 header h1{
     color: #f4ffe4;
     font-weight: 100;
@@ -42,13 +41,11 @@ form textarea{
     color: #f4ffe4;
     border: none;
     resize: none;
-    background-color: transparent;
 }
 form textarea::placeholder{
     color: #f4ffe4d2;
 }
 textarea::-webkit-scrollbar{
-    background-color: transparent;
     width: 5px;
 }
 textarea::-webkit-scrollbar-thumb{
@@ -64,7 +61,6 @@ form .sumit button{
     border-radius: 20px;
     outline: none;
     border: 1px solid #f4ffe4a8;
-    background-color: transparent;
     width: 100px;
     height: 40px;
 }
@@ -74,16 +70,18 @@ form .sumit button img{
     transform: rotatez(30deg);
     filter: invert(100%);
 }
+form .sumit button,textarea::-webkit-scrollbar,form textarea{background-color: transparent;}
 /*NOTES*/
 #tus_notas{
     margin: 3%;
 }
 .nota {
-    margin: 3% 0 0 5%;
+    margin: 1% 0 0 5%;
     max-width: 85%;
+    transform: scale(0.9);
 }
 .nota div, .nota p{
-    padding: 8px;
+    padding: 10px;
     height: 100%;
     width: 100%;
 }
@@ -100,25 +98,20 @@ form .sumit button img{
     color: rgb(211, 211, 211);
 }
 .nota a{
+    text-decoration: none;
     float: right;
-    height: 40px;
-    width: 40px;
-    padding-bottom: 2px;
+    padding: 1% 1.5%;
     border-radius: 50px;
     font-size: 120%;
-    transform: scale(0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    transform: scale(0.9);
     background-color: rgb(216, 39, 8);
     opacity: 55%;
     transition-property: all;
     transition-duration: 200ms;
 }
 .nota a:hover,.tit a:active{
-    font-weight: 1900;
-    transform: scale(0.9);
+    font-weight: 900;
+    transform: scale(1.1);
     opacity: 100%;
 }
 .conten{
@@ -127,12 +120,6 @@ form .sumit button img{
 }
 /*RESPOSIVE*/
 @media screen and (max-width: 768px){
-    header{
-        padding: 1.5% 1%;
-    }
-    header h1{
-        font-size: 150%;
-    }
     form{
         margin-top: 5%;
         width: 73%;
@@ -147,7 +134,7 @@ form .sumit button img{
         width: 100%;
         height: 115%;
     }
-    .nota {
-        margin-top: 5%;
+    .nota a{
+        padding: 1% 3%;
     }
 }

@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         link(rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/930/930541.svg")
         link(href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet')
-        link(rel="stylesheet", href="inicio.css")
+        link(rel="stylesheet", href="home.css")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Notes
     body
@@ -20,9 +20,11 @@ html(lang="en")
                             img(src="https://image.flaticon.com/icons/svg/2928/2928685.svg", alt="enviar")
             #tus_notas
                 -for(i = 0; i < note.length; i++)
-                    .nota
+                    br
+                    .nota#boun
                         a(href=`/delete/${note[i].id}`) x
                         .tit
                             h2#titl= note[i].title
-                        p.conten= note[i].content    
-script(src="inicio.js")
+                        p.conten= note[i].content
+                    br   
+script(src="home.js")
