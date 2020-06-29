@@ -6,7 +6,7 @@ Note-taking / CRUD
 Made using Node.js, Express, Pug (as template engine), css & Mysql.
 
 
-## THE SET UP:
+### THE SET UP:
 
 **Install Dependecies:**
 ```
