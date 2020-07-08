@@ -1,12 +1,18 @@
 Note-taking / CRUD
 ========
 
-*A simple and nice note-taking.*
+### A simple and nice note-taking.
 
-Made using Node.js, Express, Pug (as template engine), css & Mysql.
+## Technologies:
+- Express.js
+- mySQL
+- Pug template engine
 
+![image](https://user-images.githubusercontent.com/61896147/86874527-8b2c4c00-c0ae-11ea-948e-1110c58966f7.png)
 
-## SETUP:
+![image](https://user-images.githubusercontent.com/61896147/86874617-b6af3680-c0ae-11ea-84bd-4150193381a1.png)
+
+## Setup:
 
 **Install Dependecies:**
 ```

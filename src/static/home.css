@@ -9,7 +9,7 @@ body{
 /*HEADER*/
 header{
     padding: 0.5% 1%;
-    background-color: #355C7D;
+    background-color: #204051;
     border-bottom: solid 1px #f4ffe4;
     box-shadow: -1px -5px 32px 0px rgba(0, 0, 0, 0.527);
 }
@@ -28,8 +28,8 @@ form{
     margin-top: 2%;
     padding: 1.5%;
     display: grid;
-    background: rgba(40, 105, 255, 0.575);
-    background: linear-gradient(329deg, rgba(40, 105, 255, 0.397) 0%,rgba(0, 119, 255, 0.295) 41%, rgba(67, 189, 255, 0.473) 77%,rgba(62, 213, 255, 0.39) 100%);
+    background: rgb(69,147,159);
+    background: radial-gradient(circle, rgba(69, 147, 159, 0.685) 0%, rgba(32,64,80,1) 88%);      
     width: 50%;
     height: 200px;
     box-shadow: 17px 17px 32px 0px rgba(31, 31, 31, 0.651);
@@ -86,8 +86,7 @@ form .sumit button,textarea::-webkit-scrollbar,form textarea{background-color: t
     width: 100%;
 }
 .tit{
-    background: rgba(40, 105, 255, 0.575);
-    background: linear-gradient(329deg, rgba(40, 105, 255, 0.397) 0%,rgba(0, 119, 255, 0.295) 41%, rgba(9, 126, 189, 0.473) 77%,rgba(4, 118, 150, 0.39) 100%);
+    background-color: #3B6978;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,7 +114,8 @@ form .sumit button,textarea::-webkit-scrollbar,form textarea{background-color: t
     opacity: 100%;
 }
 .conten{
-    background-color: rgb(170, 170, 170);
+    min-height: 40px;
+    background-color: #E4E3E3;
     border-radius: 0 0 20px 20px;
 }
 /*RESPOSIVE*/

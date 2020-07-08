@@ -8,19 +8,19 @@ const color_change = (div) =>{
     chage.style.transitionDuration = '5000ms'
 
     setTimeout(() => {
-        chage.style.background = '#355C7D'    
+        chage.style.background = '#3b6970'    
     }, 100);
 
     setTimeout(() => {
-        chage.style.background = '#153d5f'    
+        chage.style.background = '#204051'    
     }, 4000);
 
     setTimeout(() => {
-        chage.style.background = '#3f78aa'    
+        chage.style.background = '#84a9a0'    
     }, 8000);
     
     setTimeout(() => {
-        chage.style.background = '#1e3a53'    
+        chage.style.background = '#204051'    
     }, 12000);
     
 }
