@@ -4,9 +4,16 @@ Note-taking / CRUD
 ### A simple and nice note-taking app, optimized for both mobile and desktop web browsers.
 
 ## Technologies:
-- Express.js
-- mySQL
-- Pug template engine
+* Node.js
+  * express
+  * body-parser
+  * pug
+  * mysql
+  * mongan
+  * node-env-file
+  * express-session
+ * mySql
+ * css
 
 ## Features
 - [x] Add notes
@@ -22,7 +29,7 @@ Note-taking / CRUD
 
 **Install Dependecies:**
 ```
-npm i mysql express express-session body-parser pug morgan
+npm i mysql express express-session body-parser pug morgan node-env-file
 ```
 **Install dev-Dependencies:**
 
