@@ -63,6 +63,7 @@ form .sumit button{
     border: 1px solid #f4ffe4a8;
     width: 100px;
     height: 40px;
+    cursor: pointer;
 }
 form .sumit button img{
     width: 100%;

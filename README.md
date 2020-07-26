@@ -1,16 +1,22 @@
 Note-taking / CRUD
 ========
 
-### A simple and nice note-taking.
+### A simple and nice note-taking app, optimized for both mobile and desktop web browsers.
 
 ## Technologies:
 - Express.js
 - mySQL
 - Pug template engine
 
-![image](https://user-images.githubusercontent.com/61896147/86874527-8b2c4c00-c0ae-11ea-948e-1110c58966f7.png)
+## Features
+- [x] Add notes
+- [x] Delete notes
+- [ ] Edit notes
 
-![image](https://user-images.githubusercontent.com/61896147/86874617-b6af3680-c0ae-11ea-84bd-4150193381a1.png)
+## Screenshot
+
+<img src="https://user-images.githubusercontent.com/61896147/86874527-8b2c4c00-c0ae-11ea-948e-1110c58966f7.png"/>
+<img src="https://user-images.githubusercontent.com/61896147/88469258-885a9500-cebd-11ea-8c46-9e66aa174608.png" height='700px'/>
 
 ## Setup:
 
@@ -22,21 +28,6 @@ npm i mysql express express-session body-parser pug morgan
 
 ```
 npm i nodemon -D
-```
-
-**Put your Mysql user and password at "src/database/conection.js":**
-
-```js
-const mysql = require('mysql')
-
-module.exports = () => {
-    return mysql.createConnection({
-        host:  'localhost', 
-        user:  'root', //<--- your user
-        password:  'root', // <--- your password
-        database:  'notes'
-    });
-}
 ```
 
 **Create the database:**
@@ -51,20 +42,21 @@ USE notes;
 
 ```sql
 CREATE TABLE nts(
-id INT(11) NOT NULL,
+id INT(11) NOT NULL AUTO_INCREMENT,
 title VARCHAR(18) NOT NULL,
-content VARCHAR(50) NOT NULL
+content TEXT NOT NULL,
+upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (id)
 );
 
-ALTER TABLE nts
-    ADD PRIMARY KEY (id);
-
-ALTER TABLE nts
-    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
-
-ALTER TABLE nts
-    MODIFY content TEXT;
 ```
+
+**Environment Variables required**
+
+`MYSQL_USER` (your mysql user)
+
+`MYSQL_PASSWORD` (your mysql password)
+
 
 **Start it up the app:**
 ```

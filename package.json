@@ -1,11 +1,10 @@
 {
   "name": "note-taking",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "no se",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "author": "@jheremois",
   "license": "ISC",
@@ -15,9 +14,7 @@
     "express-session": "^1.17.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "node-env-file": "^0.1.8",
     "pug": "^3.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
   }
 }

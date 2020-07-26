@@ -5,6 +5,7 @@ const path = require('path')
 const bodyparser = require('body-parser')
 const morgan = require('morgan')
 const http = require('http')
+const env = require('node-env-file')
 
 const app = express()
 
@@ -12,7 +13,7 @@ const app = express()
 app.set('view engine','pug')
 app.set('views', path.join(__dirname,'./views'))
 
-// Set statics files
+// Middleware
 app.use(express.static(path.join(__dirname,'./static')))
 
 app.use(bodyparser.urlencoded({extended: true}))
@@ -23,6 +24,8 @@ app.use(session({
 }))
 
 app.use(morgan('dev'))
+
+env('./.env') 
 
 // Server configuration
 app.set('port', process.env.PORT || 3000 )
