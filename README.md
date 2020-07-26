@@ -26,7 +26,7 @@ npm i nodemon -D
 
 **Put your Mysql user and password at "src/database/conection.js":**
 
-```
+```js
 const mysql = require('mysql')
 
 module.exports = () => {
@@ -41,7 +41,7 @@ module.exports = () => {
 
 **Create the database:**
 
-```
+```sql
 CREATE DATABASE notes;
 
 USE notes;
@@ -49,7 +49,7 @@ USE notes;
 
 **Create and modify the table**
 
-```
+```sql
 CREATE TABLE nts(
 id INT(11) NOT NULL,
 title VARCHAR(18) NOT NULL,
