@@ -13,8 +13,8 @@ const app = express()
 app.set('view engine','pug')
 app.set('views', path.join(__dirname,'./views'))
 
-// Middleware
-app.use(express.static(path.join(__dirname,'./static')))
+// Middlewares
+app.use(express.static(path.join(__dirname,'./public')))
 
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(session({

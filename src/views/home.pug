@@ -4,27 +4,29 @@ html(lang="en")
         meta(charset="UTF-8")
         link(rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/930/930541.svg")
         link(href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet')
-        link(rel="stylesheet", href="home.css")
+        link(rel="stylesheet", href="css/home.css")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Notes
     body
         header#head
             h1 Notes
-        section
+        block section
             .notas    
                 form(action="/", method="post")
                     textarea#titulo(name="title", cols="30", rows="1" placeholder='Title' minlength='3' maxlength='23' required)
                     textarea#contenido(name="content", cols="30" placeholder='Add note...' minlength='5' required)
                     .sumit
                         button
-                            img(src="https://image.flaticon.com/icons/svg/2928/2928685.svg", alt="enviar")
+                            img(src="icons/send.svg", alt="enviar")
             #tus_notas
                 -for(i = 0; i < note.length; i++)
                     br
                     .nota#boun
                         a(href=`/delete/${note[i].id}`) x
+                        a#edit(href=`/edit/${note[i].id}`)
+                            img(src="icons/edit.png", alt="")
                         .tit
                             h2#titl= note[i].title
                         p.conten= note[i].content
                     br   
-script(src="home.js")
+script(src="javascript/home.js")

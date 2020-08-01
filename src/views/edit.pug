@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet')
+        title notes
+    body#profile-bg
+            .notas    
+                form(action=`/edit/${datas.id}`, method="post")
+                    textarea#titulo(name="title", cols="30", rows="1" placeholder='Title' minlength='3' maxlength='23' required)= datas.title
+                    textarea#contenido(name="content", cols="30" placeholder='Add note...' minlength='5' required)= datas.content
+                    .sumit
+                        button Update
+
+
+style.
+    *{
+        font-family: 'Allerta';
+        margin: 0%;
+        padding: 0%;
+        color: #f4ffe4
+    }
+    body{
+        background-color: #535353 ;
+    }
+    /*HEADER*/
+    header{
+        padding: 0.5% 1%;
+        background-color: #204051;
+        border-bottom: solid 1px #f4ffe4;
+        box-shadow: -1px -5px 32px 0px rgba(0, 0, 0, 0.527);
+    }
+    header h1{font-weight: 100;}
+    /*FORM*/
+    .notas{
+        display: flex;
+        justify-content: center;
+        height: 700px;
+        align-items: center;
+    }
+    form{
+        border-radius: 20px;
+        border: 1px solid #f4ffe4;
+        margin-top: 2%;
+        padding: 1.5%;
+        display: grid;
+        background: rgb(69,147,159);
+        background: radial-gradient(circle, rgba(69, 147, 159, 0.685) 0%, rgba(32,64,80,1) 88%);      
+        width: 50%;
+        height: 200px;
+        box-shadow: 17px 17px 32px 0px rgba(31, 31, 31, 0.651);
+    }
+    form textarea{
+        padding: 1%;
+        font-size: 120%;
+        outline: none;
+        border: none;
+        resize: none;
+    }
+    textarea::-webkit-scrollbar{width: 5px;}
+    textarea::-webkit-scrollbar-thumb{
+        background-color:rgba(255, 255, 255, 0.527);
+        border-radius: 100px;
+    }
+    .sumit{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    form .sumit button{
+        border-radius: 20px;
+        outline: none;
+        border: 1px solid #f4ffe4a8;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+    form .sumit button,textarea::-webkit-scrollbar,form textarea{background-color: transparent;}
+    /*RESPOSIVE*/
+    @media screen and (max-width: 768px){
+        form{
+            margin-top: 5%;
+            width: 73%;
+            height: 170px;
+            padding: 2.5%;
+        }
+        form .sumit button{
+            width: 90px;
+            height: 33px;
+        }
+        form .sumit button img{
+            width: 100%;
+            height: 115%;
+        }
+    }

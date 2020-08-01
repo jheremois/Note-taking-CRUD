@@ -1,14 +1,11 @@
 /*
-    Import the conection function:
+    Import the conection module:
 */
-const bd = require('../database/conection')
-
-const conecion = bd()
-
+const conecion = require('../database/conection')
 
 
 /*
-    Render main view:
+    Render:
 */
 exports.home = (req, res)=>{
     conecion.query('SELECT * FROM nts',(err,resu)=>{
@@ -21,7 +18,7 @@ exports.home = (req, res)=>{
 
 
 /*
-    Add datas to the main view:
+    Add:
 */
 exports.upload = (req, res)=>{
 
@@ -35,10 +32,39 @@ exports.upload = (req, res)=>{
 
 
 /*
-    Delete datas from de table and from the main view:
+    Delete:
 */
-exports.delate = (req,res)=>{
+exports.delate = async (req,res)=>{
     const {id} = req.params
-    console.log(id)
-    conecion.query(`DELETE FROM nts WHERE id = ${id}`,(err,resul)=> {res.redirect('/')})
+    
+    const Delete = await conecion.query(`DELETE FROM nts WHERE id = ${id}`)
+
+    res.redirect('/')
+}
+
+/*
+    update:
+*/
+exports.update = async (req,res)=>{
+    const {id} = req.params
+    
+    const datas = await conecion.query(`SELECT * FROM nts WHERE id = ${id}`)
+    
+    const render = await res.render('edit', {datas: datas[0]})
+
+}
+
+exports.change = async (req, res)=>{
+    const {id} = req.params
+
+    const {title, content} = req.body
+    
+    const newnote = {
+        title,
+        content,
+    }
+    
+    const update = await conecion.query(`UPDATE nts SET ? WHERE id = ?`, [newnote, id])
+
+    res.redirect('/')
 }

@@ -4,7 +4,7 @@
     padding: 0%;
 }
 body{
-    background-color: #535353 ;
+    background-color: #3d3d3d ;
 }
 /*HEADER*/
 header{
@@ -108,12 +108,18 @@ form .sumit button,textarea::-webkit-scrollbar,form textarea{background-color: t
     opacity: 55%;
     transition-property: all;
     transition-duration: 200ms;
+    color: black;
 }
 .nota a:hover,.tit a:active{
     font-weight: 900;
     transform: scale(1.1);
     opacity: 100%;
 }
+#edit{
+    background-color: #3cce54;
+    margin-right: 5px;
+}
+.nota a img{height: 15px}
 .conten{
     min-height: 40px;
     background-color: #E4E3E3;

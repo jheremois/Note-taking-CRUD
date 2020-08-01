@@ -58,14 +58,16 @@ const bouns = (note)=>{
 
     const not = document.querySelectorAll(note)
     const nt = document.querySelectorAll(note).length - 1
+    
+    if(not.length > 0){
+        not[nt].style.transformOrigin = 'all'
+        not[nt].style.transitionDuration = '500ms'
 
-    not[nt].style.transformOrigin = 'all'
-    not[nt].style.transitionDuration = '500ms'
-
-    setTimeout(() => {
-        for(i=0; i < nt + 1; i++){
-            not[i].style.transform =  'scale(1)'}    
-    }, 400);
+        setTimeout(() => {
+            for(i=0; i < nt + 1; i++){
+                not[i].style.transform =  'scale(1)'}    
+        }, 400)
+    }
 }
 
 bouns('#boun')

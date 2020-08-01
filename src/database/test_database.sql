@@ -1,5 +1,3 @@
-/*
-
 CREATE DATABASE notes;
 
 USE notes;
