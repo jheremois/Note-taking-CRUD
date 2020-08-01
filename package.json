@@ -1,7 +1,7 @@
 {
   "name": "note-taking",
-  "version": "2.0.0",
-  "description": "no se",
+  "version": "3.0.0",
+  "description": "Crud",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js"
@@ -16,5 +16,6 @@
     "mysql": "^2.18.1",
     "node-env-file": "^0.1.8",
     "pug": "^3.0.0"
-  }
+  },
+  "devDependencies": {}
 }
