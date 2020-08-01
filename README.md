@@ -9,7 +9,7 @@ Note-taking / CRUD
   * body-parser
   * pug
   * mysql
-  * mongan
+  * morgan
   * node-env-file
   * express-session
  * mySql
@@ -18,23 +18,18 @@ Note-taking / CRUD
 ## Features
 - [x] Add notes
 - [x] Delete notes
-- [ ] Edit notes
+- [x] Edit notes
 
 ## Screenshot
 
-<img src="https://user-images.githubusercontent.com/61896147/86874527-8b2c4c00-c0ae-11ea-948e-1110c58966f7.png"/>
-<img src="https://user-images.githubusercontent.com/61896147/88469258-885a9500-cebd-11ea-8c46-9e66aa174608.png" height='700px'/>
+<img src="https://user-images.githubusercontent.com/61896147/89110988-9dd04180-d41e-11ea-81e2-7cb65673ad24.png"/>
+<img src="https://user-images.githubusercontent.com/61896147/89110996-bcced380-d41e-11ea-8aaf-09606ae9e860.png" height='700px'/>
 
 ## Setup:
 
 **Install Dependecies:**
 ```
 npm i mysql express express-session body-parser pug morgan node-env-file
-```
-**Install dev-Dependencies:**
-
-```
-npm i nodemon -D
 ```
 
 **Create the database:**
