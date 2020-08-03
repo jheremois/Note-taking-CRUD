@@ -25,12 +25,23 @@ app.use(session({
 
 app.use(morgan('dev'))
 
-env('./.env') 
+env('./.env')
 
-// Server configuration
+// Load routes
 app.set('port', process.env.PORT || 3000 )
 const server = http.createServer(app)
 const routes = require('./routes/route')
 app.use('/', routes())
+
+// 404
+app.use(function(req, res, next){
+    res.status(404)
+
+    res.render('404', { url: req.url })
+    console.log(req.url)
+    return
+})
+
+// Launch Server
 server.listen(app.get('port'))
 console.log(`Port: ${app.get('port')}`)
