@@ -1,6 +1,6 @@
 {
   "name": "note-taking",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Crud",
   "main": "index.js",
   "scripts": {

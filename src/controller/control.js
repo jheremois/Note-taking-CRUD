@@ -1,12 +1,14 @@
 /*
     Import the conection module:
 */
+
 const conecion = require('../database/conection')
 
 
 /*
     Render:
 */
+
 exports.home = (req, res)=>{
     conecion.query('SELECT * FROM nts',(err,resu)=>{
         res.render('home',{
@@ -20,6 +22,7 @@ exports.home = (req, res)=>{
 /*
     Add:
 */
+
 exports.upload = (req, res)=>{
 
     const {title, content } = req.body
@@ -34,6 +37,7 @@ exports.upload = (req, res)=>{
 /*
     Delete:
 */
+
 exports.delate = async (req,res)=>{
     const {id} = req.params
     
@@ -45,6 +49,7 @@ exports.delate = async (req,res)=>{
 /*
     update:
 */
+
 exports.update = async (req,res)=>{
     const {id} = req.params
     
@@ -67,4 +72,5 @@ exports.change = async (req, res)=>{
     const update = await conecion.query(`UPDATE nts SET ? WHERE id = ?`, [newnote, id])
 
     res.redirect('/')
+
 }

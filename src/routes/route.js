@@ -4,6 +4,9 @@ const control = require('../controller/control')
 
 const router = express.Router()
 
+
+// Views render module
+
 module.exports = () => {
 
     router.get('/', control.home)
@@ -13,4 +16,5 @@ module.exports = () => {
     router.post('/edit/:id', control.change)
 
     return router
+
 }
