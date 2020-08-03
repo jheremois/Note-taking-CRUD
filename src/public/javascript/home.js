@@ -8,19 +8,23 @@ const color_change = (div) =>{
     chage.style.transitionDuration = '5000ms'
 
     setTimeout(() => {
-        chage.style.background = '#3b6970'    
+        chage.style.background = '#3b6970' 
+
     }, 100);
 
     setTimeout(() => {
         chage.style.background = '#204051'    
+    
     }, 4000);
 
     setTimeout(() => {
         chage.style.background = '#84a9a0'    
+    
     }, 8000);
     
     setTimeout(() => {
         chage.style.background = '#204051'    
+    
     }, 12000);
     
 }
@@ -28,8 +32,10 @@ const color_change = (div) =>{
 
 
 color_change('head')
+
 setInterval(() => {
     color_change('head')
+
 }, 13000);
 
 
@@ -65,9 +71,14 @@ const bouns = (note)=>{
 
         setTimeout(() => {
             for(i=0; i < nt + 1; i++){
-                not[i].style.transform =  'scale(1)'}    
+                not[i].style.transform =  'scale(1)'
+            
+            }
+
         }, 400)
+
     }
+    
 }
 
 bouns('#boun')

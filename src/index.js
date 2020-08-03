@@ -29,6 +29,7 @@ env('./.env')
 
 // Load routes
 app.set('port', process.env.PORT || 3000 )
+
 const server = http.createServer(app)
 const routes = require('./routes/route')
 app.use('/', routes())
