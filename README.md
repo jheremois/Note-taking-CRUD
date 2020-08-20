@@ -9,7 +9,6 @@ Note-taking / CRUD
   * body-parser
   * pug
   * mysql
-  * morgan
   * node-env-file
   * express-session
  * mySql
