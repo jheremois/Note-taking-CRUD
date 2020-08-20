@@ -4,7 +4,6 @@ const express = require('express')
 const session = require('express-session')
 const path = require('path')
 const bodyparser = require('body-parser')
-const morgan = require('morgan')
 const http = require('http')
 const env = require('node-env-file')
 
@@ -29,7 +28,6 @@ app.use(session({
 }))
 
 
-app.use(morgan('dev'))
 
 env('./.env')
 
@@ -48,11 +46,9 @@ app.use(function(req, res, next){
     res.status(404)
 
     res.render('404', { url: req.url })
-    console.log(req.url)
     return
 })
 
 // Launch Server
 
 server.listen(app.get('port'))
-console.log(`Port: ${app.get('port')}`)

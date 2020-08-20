@@ -53,11 +53,14 @@ PRIMARY KEY (id)
 
 ```
 
-**Environment Variables required**
 
-`MYSQL_USER` (your mysql user)
+**Environment Variables on the .env file required**
 
-`MYSQL_PASSWORD` (your mysql password)
+`MYSQL_HOST`
+
+`MYSQL_USER`
+
+`MYSQL_PASSWORD`
 
 
 **Start it up the app:**
